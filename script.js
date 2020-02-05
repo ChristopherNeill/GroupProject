@@ -14,7 +14,9 @@ $.ajax({
   console.log(response);
   $("#movie").removeClass("hide");
   $("#title1").text((response.results[1].title) + " Rating: " + (response.results[1].vote_average));
-  $("#poster1").html("<img src=\"https://image.tmdb.org/t/p/w200/" + response.results[1].poster_path + "\">");
+
+  $("#poster-1").attr("src" , "https://image.tmdb.org/t/p/original" + response.results[1].poster_path);
+  //$("#poster1").html("<img src=\"https://image.tmdb.org/t/p/w200/" + response.results[1].poster_path + "\">");
   $("#plot1").text(response.results[1].overview)
   movieTitle = response.results[1].title;
 })
