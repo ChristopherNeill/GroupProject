@@ -25,6 +25,15 @@ $.ajax({
   $("#title3").html("Title: " + response.results[3].title);
   $("#poster3").append("<img src= https://image.tmdb.org/t/p/w200" + response.results[3].poster_path + ">");
   $("#plot3").html("Synposis: " + response.results[3].overview); 
+  $("#title4").html("Title: " + response.results[4].title);
+  $("#poster4").append("<img src= https://image.tmdb.org/t/p/w200" + response.results[4].poster_path + ">");
+  $("#plot4").html("Synposis: " + response.results[4].overview); 
+  $("#title5").html("Title: " + response.results[5].title);
+  $("#poster5").append("<img src= https://image.tmdb.org/t/p/w200" + response.results[5].poster_path + ">");
+  $("#plot5").html("Synposis: " + response.results[5].overview); 
+  $("#title6").html("Title: " + response.results[6].title);
+  $("#poster6").append("<img src= https://image.tmdb.org/t/p/w200" + response.results[6].poster_path + ">");
+  $("#plot6").html("Synposis: " + response.results[6].overview); 
 
   
   
