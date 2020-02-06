@@ -200,10 +200,10 @@ function getRestaurantsByTheater(theaterName){
             console.log(restaurants[i].restaurant.name);
             /*Creating the restaurant card UI dynamically for each restaurant*/
             $('#restaurant_container').append(
-            '<div class="max-w-sm rounded overflow-hidden shadow-lg">'+
-                '<div class="font-bold text-xl mb-2">'+
+            '<div class="w-full mx-auto rounded overflow-hidden shadow-lg">'+
+                '<div class="w-full mx-auto font-bold text-xl mb-2">'+
                 restaurants[i].restaurant.name +
-           ' </div> <p class="text-gray-700 text-base">'+
+           ' </div> <p class="w-full text-gray-700 text-base">'+
                ' Cost for two :' + restaurants[i].restaurant.average_cost_for_two+'<br>'+
             'Cuisine: '+ restaurants[i].restaurant.cuisines+ '<br> </p> </div>'
             )
