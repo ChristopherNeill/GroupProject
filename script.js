@@ -13,12 +13,17 @@ $.ajax({
 }).then(function (response) {
   console.log(response);
   $("#movie").removeClass("hide");
-  $("#title1").text((response.results[1].title) + " Rating: " + (response.results[1].vote_average));
 
-  $("#poster-1").attr("src" , "https://image.tmdb.org/t/p/original" + response.results[1].poster_path);
-  //$("#poster1").html("<img src=\"https://image.tmdb.org/t/p/w200/" + response.results[1].poster_path + "\">");
-  $("#plot1").text(response.results[1].overview)
-  movieTitle = response.results[1].title;
+  for (var i = 0; i < 3; i++){
+    $("#title" + i).text(response.results[i].title);
+    $("#rating" + i).text("Rating: " + response.results[i].vote_average);
+
+    $("#poster" + i).attr("src" , "https://image.tmdb.org/t/p/original" + response.results[i].poster_path);
+    //$("#poster1").html("<img src=\"https://image.tmdb.org/t/p/w200/" + response.results[1].poster_path + "\">");
+    $("#plot" + i).text(response.results[i].overview)
+    movieTitle = response.results[i].title;
+  }
+  
 })
 };
  
