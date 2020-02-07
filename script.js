@@ -1,3 +1,41 @@
+/*const APIKEY = "f9849342e7c41936868fe3b62aa7794b";
+var lat;
+var lon;
+restaurantList = [];
+var main = document.querySelector("main");
+getFood();
+function getFood(){
+    getCityID();
+    main.innerHTML = "";
+    var fURL = "https://developers.zomato.com/api/v2.1/search?count=10&lat=" + lat + "&lon=" + lon+ "&radius=10000" + "&apikey=" + APIKEY;
+    $.ajax({
+        url: fURL,
+        method: "GET"
+    }).then((response) =>{
+        console.log(response.restaurants);
+        //restaurantList = response.restaurants[i];
+        response.restaurants.forEach(function(index, element){
+            var div = document.createElement("div");
+            var resTitle = document.createElement("h1");
+            resTitle.textContent = response.restaurants[index].restaurant.name
+            console.log(resTitle);
+        })
+        div.append(resTitle);
+        main.append(div);
+    })
+}
+function getCityID(){
+    var city = ($("cityInput").val());
+    var CIDURL = "https://developers.zomato.com/api/v2.1/locations?query=" + city + "&apikey=" + APIKEY;
+    $.ajax({
+        url: CIDURL,
+        method: "GET"
+    }).then((response) =>{
+        lat = response.latitude;
+        lon = response.longitude
+    })
+}*/
+
 var movieKey = "f186a14b09112b273bdded14d4bbc874";
 var movieURL = "https://api.themoviedb.org/3/movie/now_playing?api_key=f186a14b09112b273bdded14d4bbc874";
 var currentDate = moment().format("YYYY-MM-DD");
