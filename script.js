@@ -72,7 +72,7 @@ function getShowTime() {
     return;
   }
 
-  var movieTimesURL = "http://data.tmsapi.com/v1.1/movies/showings?startDate=" + currentDate + "&zip=" + zipCode + "&api_key=7cyx4bm5w9yfvdm6mwuyc5ce";
+  var movieTimesURL = "https://data.tmsapi.com/v1.1/movies/showings?startDate=" + currentDate + "&zip=" + zipCode + "&api_key=7cyx4bm5w9yfvdm6mwuyc5ce";
 
   $.ajax({
     url: movieTimesURL,
